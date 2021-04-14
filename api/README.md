@@ -1,16 +1,6 @@
 # README
 # one_plate DB設計
 
-## positionsテーブル
-| Column          | Type       | Options           |
-|-----------------|------------|-------------------|
-| admin           | string     | null: false       |
-| store           | string     | null: false       |
-| customer        | string     | null: false       |
-
-### Association
-- has_one :user
-
 ## usersテーブル
 | Column          | Type       | Options           |
 |-----------------|------------|-------------------|
@@ -19,12 +9,11 @@
 | last_name       | string     | null: false       |
 | first_name_kana | string     | null: false       |
 | last_name_kana  | string     | null: false       |
-| position        | references | foreign_key: true |
+| position_id     | integer    | null: false       |
 
 ### Association
 - has_one :customer
 - has_one :store
-- belongs_to :position
 
 ## customersテーブル
 | Column          | Type       | Options           |
