@@ -4,12 +4,10 @@
 ## usersテーブル
 | Column          | Type       | Options           |
 |-----------------|------------|-------------------|
-| nickname        | string     | null: false       |
-| first_name      | string     | null: false       |
-| last_name       | string     | null: false       |
-| first_name_kana | string     | null: false       |
-| last_name_kana  | string     | null: false       |
+| email           | string     | null: false       |
+| password        | string     | null: false       |
 | position_id     | integer    | null: false       |
+| status_id       | integer    | null: false       |
 
 ### Association
 - has_one :customer
@@ -18,9 +16,14 @@
 ## customersテーブル
 | Column          | Type       | Options           |
 |-----------------|------------|-------------------|
-| birth_day       | string     | null: false       |
+| nickname        | string     | null: false       |
+| first_name      | string     | null: false       |
+| last_name       | string     | null: false       |
+| first_name_kana | string     | null: false       |
+| last_name_kana  | string     | null: false       |
 | prefecture_id   | integer    | null: false       |
 | phone_number    | string     | null: false       |
+| birth_day       | date       | null: false       |
 | user            | references | foreign_key: true |
 
 ### Association
@@ -29,7 +32,11 @@
 ## storesテーブル
 | Column          | Type       | Options           |
 |-----------------|------------|-------------------|
-| open_day        | string     | null: false       |
+| name            | string     | null: false       |
+| first_name      | string     | null: false       |
+| last_name       | string     | null: false       |
+| first_name_kana | string     | null: false       |
+| last_name_kana  | string     | null: false       |
 | postal_code     | string     | null: false       |
 | prefecture_id   | integer    | null: false       |
 | address         | string     | null: false       |
