@@ -9,6 +9,9 @@ services:
       - ./api:/one_plate/api
     depends_on:
       - db
+    environment:
+      - API_IDENTIFIER: ${API_IDENTIFIER}
+      - DOMAIN: ${DOMAIN}
     tty: true
     stdin_open: true
   frontend:
