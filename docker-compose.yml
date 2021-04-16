@@ -10,8 +10,8 @@ services:
     depends_on:
       - db
     environment:
-      - API_IDENTIFIER: ${API_IDENTIFIER}
-      - DOMAIN: ${DOMAIN}
+      - API_IDENTIFIER=${API_IDENTIFIER}
+      - DOMAIN=${DOMAIN}
     tty: true
     stdin_open: true
   frontend:
