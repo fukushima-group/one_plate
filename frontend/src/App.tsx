@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import { SignUpAuth } from "components/organisms/Modal/UserAuth/SignUpAuth";
 
 export const App = () => {
   return (
     <>
-      <h1>Hello</h1>
+      <SignUpAuth />
     </>
   );
 };
