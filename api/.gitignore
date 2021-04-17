@@ -28,3 +28,4 @@
 
 /config/credentials/development.key
 /.env
+/vendor/bundle
