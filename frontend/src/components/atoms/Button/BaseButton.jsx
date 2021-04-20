@@ -18,8 +18,6 @@ const ButtonStyled = styled.button`
   }
 `;
 
-export const BaseButton: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement>
-> = (props) => {
+export const BaseButton = (props) => {
   return <ButtonStyled {...props} />;
 };

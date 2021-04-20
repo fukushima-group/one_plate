@@ -24,7 +24,7 @@ const EmailButton = styled(BaseButton)`
   background-color: #ff6928;
 `;
 
-export const SnsButton: React.FC = () => {
+export const SnsButton = () => {
   return (
     <>
       <FacebookButton>
