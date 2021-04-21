@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Humburger = styled.div`
-  z-index:999;
   position: absolute;
   top: 20px;
   right: 30px;
   width: 48px;
   height: 25px;
   cursor: pointer;
-  transition: 1s;
 `;
 
 const InnerLine = styled.div`
@@ -19,7 +17,6 @@ const InnerLine = styled.div`
   width: 35px;
   height: 2px;
   background-color: black;
-  transition: 1s;
   border-radius: 4px;
 `;
 
