@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { SnsButton } from "components/atoms/Button/SnsButton";
+// import { SignUpButton } from "components/atoms/Button/SignUpButton";
+import { Form } from "components/atoms/TextField/Form";
 import { pc, sp, tab } from "media";
+
+// const fontSize = styled.div`font-size: 14px;`;
 
 const SignupPopUp = styled.div`
   border-radius: 4px;
-  background: #fff;
   padding: 30px;
-  margin: 100px auto;
   ${sp`
-  margin: 120px auto;
+  margin: 40px auto;
   width: 100%
   height: 100%;
 `}
@@ -35,14 +36,15 @@ const SignUpRegisterTitle = styled.h2`
 `;
 
 const SignUpRegisterSubTitle = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.69;
+  margin-bottom: 20px;
 `;
 
-const SnsButtonForm = styled.div`
-  margin: 40px 0;
-  align-items: center;
-`;
+// const SnsButtonForm = styled.div`
+//   margin: 40px 0;
+//   align-items: center;
+// `;
 
 const SignUpLogin = styled.a`
   text-decoration: none;
@@ -54,10 +56,9 @@ export const SignUpAuth = () => {
     <SignupPopUp>
       <SignUpRegiter>
         <SignUpRegisterTitle>SIGN UP</SignUpRegisterTitle>
-        <SignUpRegisterSubTitle>新規会員登録</SignUpRegisterSubTitle>
-        <SnsButtonForm>
-          <SnsButton />
-        </SnsButtonForm>
+        <SignUpRegisterSubTitle>会員情報入力</SignUpRegisterSubTitle>
+        <Form />
+        {/* <SnsButtonForm><SignUpButton /></SnsButtonForm> */}
         <SignUpLogin href="/">ログインはこちら</SignUpLogin>
       </SignUpRegiter>
     </SignupPopUp>
