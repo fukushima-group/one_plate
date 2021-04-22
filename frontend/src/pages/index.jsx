@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HumbergerIcon } from '../components/atoms/Humberger/HumbergerIcon';
+import { GlobalStyle } from '../style/index.jsx'
+import  { Header }  from '../components/molecules/Header';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -22,10 +23,8 @@ const useStyles = makeStyles({
 
 // common
 const Container = styled.div`
-  font-family: "Noto Sans  CJK JP Bold", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   overflow-x:hidden;
   height:3000px;
-
 `;
 
 const H2 = styled.h2`
@@ -45,21 +44,6 @@ const P = styled.p`
  text-align: justify;
  margin:5% 0;
  line-height:2.3;
-`;
-
-// header
-const GlobalHeader = styled.header`
-  display:flex;
-  positon:fixed;
-  position: fixed; /* 要素の位置を固定する */
-  width: 100%; /* 幅を指定する */
-  background-color: white;
-  justify-content: space-between;
-  padding:4.5% 2.5%;
-`;
-
-const HeaderTitle = styled.div`
- font-size:20px;
 `;
 
 // GridLayOut1
@@ -119,13 +103,10 @@ export const Index = () => {
 
   return (
     <Container>
+      <GlobalStyle />
       {/* header */}
-      <GlobalHeader>
-        <HeaderTitle>One Plate</HeaderTitle>
-        <HumbergerIcon />
-      </GlobalHeader>
+         <Header />
       {/* endheader */}
-
 
       {/* kv */}
       <img src={`${process.env.PUBLIC_URL}/topPageImage.jpg`} style={{width:"100%",padding:"60px 0 0 0"}} />
