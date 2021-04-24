@@ -35,6 +35,24 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    font-size:12px;    
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
   ul, p {
     padding: 0;
     margin: 0;

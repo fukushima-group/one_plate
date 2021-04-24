@@ -10,11 +10,10 @@ const GlobalHeader = styled.header`
   width: 100%; /* 幅を指定する */
   background-color: white;
   justify-content: space-between;
-  padding:4.5% 2.5%;
+  padding:4% 2%;
 `;
 
-const HeaderTitle = styled.div`
- font-size:20px;
+const HeaderTitle = styled.h2`
 `;
 
 export const Header = () => {

@@ -18,7 +18,6 @@ const useStyles = makeStyles({
     margin: "2% auto",
     width: "90%"
   },
- 
 });
 
 // common
@@ -28,26 +27,21 @@ const Container = styled.div`
 `;
 
 const H2 = styled.h2`
-    margin:0;
 `;
 
 const H3 = styled.h3`
-    margin:0;
 `;
 
 const H4 = styled.h4`
-    margin:0;
 `;
 
 const P = styled.p`
- font-size:12px;
- text-align: justify;
- margin:5% 0;
- line-height:2.3;
+  margin:5% 0;
+  line-height:2.3;
 `;
 
 // GridLayOut1
-const L1LeftH2 = styled(H2)`
+const L1Left = styled(H2)`
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   height: 260px;
@@ -116,7 +110,7 @@ export const Index = () => {
       {/* GridLayOut1 */}
       <Grid container className={classes.GridL1Container}>
         <Grid item xs={4}>
-           <L1LeftH2>渾身の一皿を見つけよう</L1LeftH2>
+           <L1Left>渾身の一皿を見つけよう</L1Left>
         </Grid>
         <Grid item xs={8} >
         <L1RightP>(文章設定必須)ダミーダミーダミーダミーダミーダミー
