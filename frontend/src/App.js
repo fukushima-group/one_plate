@@ -1,11 +1,10 @@
 import React from "react";
-import "./App.css";
-import { SignUpAuth } from "components/organisms/Modal/ShopAuth/SignUpAuth";
+import { ShopSignUp } from "components/organisms/Modal/ShopAuth/ShopSignUp";
 
 export const App = () => {
   return (
     <>
-      <SignUpAuth />
+      <ShopSignUp />
     </>
   );
 };
