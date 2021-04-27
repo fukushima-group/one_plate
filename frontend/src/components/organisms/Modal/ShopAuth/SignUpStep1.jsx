@@ -1,7 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { pc, sp, tab } from "media";
-
 import { useForm } from "react-hook-form";
 import { useRef } from "react";
 import { withRouter } from "react-router-dom";
@@ -9,41 +6,13 @@ import { useStateMachine } from "little-state-machine";
 import { updateAction } from "components/organisms/Modal/ShopAuth/updateAction";
 import "components/organisms/Modal/ShopAuth/styles.css";
 
-const SignUpMain = styled.div`
-  padding: 30px;
-  text-align: center;
-  ${sp`
-  margin: 40px auto;
-  width: 100%
-  height: 100%;
-`}
-  ${tab`
-  margin: 200px auto;
-  width: 50%;
-  height: 50%;
-`}
-  ${pc`
-  width: 25%;
-  height: 60%;
-`}
-`;
-
-const SignUpRegisterTitle = styled.h2`
-  font-weight: bold;
-  margin-bottom: 15px;
-  letter-spacing: 0.04em;
-`;
-
-const SignUpRegisterSubTitle = styled.div`
-  font-size: 16px;
-  line-height: 1.69;
-  margin-bottom: 20px;
-`;
-
-const SignUpLogin = styled.a`
-  text-decoration: none;
-  color: black;
-`;
+// 新規登録のビューのコンポーネント
+import {
+  SignUpMain,
+  SignUpRegisterTitle,
+  SignUpRegisterSubTitle,
+  SignUpLogin,
+} from "components/organisms/Modal/SignUpAuth";
 
 export const SignUpStep1 = (props) => {
   const {
@@ -55,7 +24,6 @@ export const SignUpStep1 = (props) => {
 
   const password = useRef({});
   password.current = watch("password", "");
-  // console.log(password.current);
 
   const { actions, state } = useStateMachine({ updateAction });
   const onSubmit = (data) => {

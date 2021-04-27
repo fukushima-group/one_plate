@@ -1,43 +1,12 @@
 import React from "react";
 import { useStateMachine } from "little-state-machine";
 import { updateAction } from "components/organisms/Modal/ShopAuth/updateAction";
-import "components/organisms/Modal/ShopAuth/styles.css";
-import styled from "styled-components";
-import { pc, sp, tab } from "media";
 
-const SignUpMain = styled.div`
-  border-radius: 4px;
-  padding: 30px;
-  text-align: center;
-  ${sp`
-  margin: 40px auto;
-  width: 100%
-  height: 100%;
-`}
-  ${tab`
-  margin: 200px auto;
-  width: 50%;
-  height: 50%;
-`}
-  ${pc`
-  width: 25%;
-  height: 60%;
-`}
-`;
-
-const SignUpRegisterTitle = styled.h2`
-  font-weight: bold;
-  margin-bottom: 30px;
-  letter-spacing: 0.04em;
-`;
-
-const SignUpConfirm = styled.div`
-  margin: 20px 20px;
-  letter-spacing: 0.04em;
-  display: flex;
-  // justify-content: center;
-  // align-item: center;
-`;
+import {
+  SignUpMain,
+  SignUpRegisterTitle,
+  SignUpConfirm,
+} from "components/organisms/Modal/SignUpAuth";
 
 export const Confirm = () => {
   const { state } = useStateMachine(updateAction);

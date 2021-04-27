@@ -1,42 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import { pc, sp, tab } from "media";
 import { useForm } from "react-hook-form";
 import { withRouter } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import { updateAction } from "components/organisms/Modal/ShopAuth/updateAction";
 import "components/organisms/Modal/ShopAuth/styles.css";
 
-const SignUpMain = styled.div`
-  padding: 30px;
-  text-align: center;
-  ${sp`
-  margin: 40px auto;
-  width: 100%
-  height: 100%;
-`}
-  ${tab`
-  margin: 200px auto;
-  width: 50%;
-  height: 50%;
-`}
-  ${pc`
-  width: 25%;
-  height: 60%;
-`}
-`;
-
-const SignUpRegisterTitle = styled.h2`
-  font-weight: bold;
-  margin-bottom: 15px;
-  letter-spacing: 0.04em;
-`;
-
-const SignUpRegisterSubTitle = styled.div`
-  font-size: 16px;
-  line-height: 1.69;
-  margin-bottom: 20px;
-`;
+import {
+  SignUpMain,
+  SignUpRegisterTitle,
+  SignUpRegisterSubTitle,
+} from "components/organisms/Modal/SignUpAuth";
 
 export const SignUpStep2 = (props) => {
   const {
@@ -44,7 +17,8 @@ export const SignUpStep2 = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { state, actions } = useStateMachine({ updateAction });
+  const { actions, state } = useStateMachine({ updateAction });
+  console.log(actions);
   const onSubmit = (data) => {
     actions.updateAction(data);
     props.history.push("./Confirm");
@@ -155,12 +129,3 @@ export const SignUpStep2 = (props) => {
 };
 
 export default withRouter(SignUpStep2);
-
-// ・店名
-// ・電話番号
-// 半角数字のみ(ハイフンは含めない)
-// ・郵便番号
-// ・都道府県
-// active_hashで実装をする
-// ・住所
-// ・建物名
