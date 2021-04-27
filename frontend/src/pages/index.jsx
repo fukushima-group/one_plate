@@ -4,6 +4,9 @@ import { GlobalStyle } from '../style/index.jsx'
 import  { Header }  from '../components/molecules/Header';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // materialUIのCSSを追加
 const useStyles = makeStyles({
@@ -26,19 +29,22 @@ const Container = styled.div`
   height:3000px;
 `;
 
-const H2 = styled.h2`
-`;
+const H2 = styled.h2``;
 
-const H3 = styled.h3`
-`;
+const H3 = styled.h3``;
 
-const H4 = styled.h4`
-`;
+const H4 = styled.h4``;
 
 const P = styled.p`
   margin:5% 0;
   line-height:2.3;
 `;
+
+
+// Slider
+const SliderContainer = styled.div`
+
+`; 
 
 // GridLayOut1
 const L1Left = styled(H2)`
@@ -95,6 +101,15 @@ export const Index = () => {
   // useStylesの呼び出し
   const classes = useStyles();
 
+  // slickslider
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
     <Container>
       <GlobalStyle />
@@ -103,7 +118,20 @@ export const Index = () => {
       {/* endheader */}
 
       {/* kv */}
-      <img src={`${process.env.PUBLIC_URL}/topPageImage.jpg`} style={{width:"100%",padding:"60px 0 0 0"}} />
+      <SliderContainer>
+        <Slider {...settings}>
+          <div>
+            <img src={`${process.env.PUBLIC_URL}/topPageImage.jpg`} style={{width:"100%"}} />
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+        </Slider>
+      </SliderContainer>
+      
       {/* endkv */}
 
 
