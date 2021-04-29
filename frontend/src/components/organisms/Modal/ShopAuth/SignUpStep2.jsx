@@ -18,7 +18,6 @@ export const SignUpStep2 = (props) => {
     formState: { errors },
   } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
-  console.log(actions);
   const onSubmit = (data) => {
     actions.updateAction(data);
     props.history.push("./Confirm");
