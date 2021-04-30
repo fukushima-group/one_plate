@@ -40,10 +40,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   h3 {
+    font-size:22px;
     padding: 0;
     margin: 0;
   }
   h4 {
+    font-size:15px;
     padding: 0;
     margin: 0;
   }
