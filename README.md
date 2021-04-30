@@ -37,6 +37,15 @@ one_plate % docker-compose up -d
 one_plate % docker exec one_plate_api_1 rails db:create
 ```
 
+※失敗した場合、コンテナ内にログインし、データベースを作成する
+
+```
+one_plate % docker exec -it one_plate_api_1 bash
+root@コンテナID:/one_plate/api# bundle install
+root@コンテナID:/one_plate/api# bundle exec rails db:create
+root@コンテナID:/one_plate/api# exit
+```
+
 **⑥各ローカルホストにアクセスし、確認**
 
 ```
