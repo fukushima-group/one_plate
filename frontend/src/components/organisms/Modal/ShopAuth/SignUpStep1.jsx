@@ -108,8 +108,6 @@ export const SignUpStep1 = (props) => {
           placeholder="（例）email1234@gmail.com"
           {...register("email", {
             required: "メールアドレスを入力してください",
-            pattern: /^\S+@\S+$/i,
-            message: "有効なメールアドレスを入力してください",
           })}
         />
         {errors.email && <p>{errors.email.message}</p>}
