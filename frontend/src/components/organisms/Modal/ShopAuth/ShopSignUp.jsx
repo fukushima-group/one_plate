@@ -6,21 +6,19 @@ import { SignUpStep2 } from "components/organisms/Modal/ShopAuth/SignUpStep2";
 import { Confirm } from "components/organisms/Modal/ShopAuth/Confirm";
 
 createStore({
-  data: {
-    last_name: "",
-    first_name: "",
-    last_name_kana: "",
-    first_name_kana: "",
-    email: "",
-    password: "",
-    password_repeat: "",
-    shop_name: "",
-    phone_number: "",
-    postal_code: "",
-    prefecture: "",
-    address: "",
-    building: "",
-  },
+  last_name: "",
+  first_name: "",
+  last_name_kana: "",
+  first_name_kana: "",
+  email: "",
+  password: "",
+  password_repeat: "",
+  shop_name: "",
+  phone_number: "",
+  postal_code: "",
+  prefecture: "",
+  address: "",
+  building: "",
 });
 
 export const ShopSignUp = () => {

@@ -3,8 +3,6 @@ export const updateAction = (state, payload) => {
   console.log("payload:", payload);
   return {
     ...state,
-    data: {
-      ...payload,
-    },
+    ...payload,
   };
 };
