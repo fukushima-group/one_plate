@@ -22,7 +22,6 @@ export const SignUpMain = styled.div`
 `;
 
 export const SignUpRegisterTitle = styled.h2`
-  // eslint-disable-line no-unused-vars
   font-weight: bold;
   margin-bottom: 15px;
   letter-spacing: 0.04em;
