@@ -7,15 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Slider
 const SliderContainer = styled.div`
-  width:calc(100vw - 50px);
-  margin:0 auto;
   padding: 70px 0 0 0;
   position: relative;
- -webkit-box-sizing: border-box;
-  
-`; 
+-webkit-box-sizing: border-box;
+`;
 const SlideItem = styled.div`
-    position:relative;
+  position:relative;
 `; 
 
 const SliderTxt = styled.h2`
@@ -38,8 +35,8 @@ function SampleNextArrow(props) {
       style={{ ...style, 
               position: "absolute", 
               top:"100px",
-              right:"10px",
-              background: "black" }}
+              right:"25px",
+              zIndex:"999"}}
       onClick={onClick}
     />
   );
@@ -53,8 +50,8 @@ function SamplePrevArrow(props) {
       style={{ ...style, 
               position: "absolute", 
               top:"100px",
-              left:"10px",
-              background: "black" }}
+              left:"25px",
+              zIndex:"999" }}
       onClick={onClick}
     />
   );
