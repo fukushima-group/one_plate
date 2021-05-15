@@ -5,6 +5,8 @@ import { updateAction } from "components/organisms/Modal/ShopAuth/updateAction";
 import {
   SignUpMain,
   SignUpRegisterTitle,
+  SignUpRegisterSubTitle,
+  SignUpConfirmLavel,
   SignUpConfirm,
 } from "components/organisms/Modal/SignUpAuth";
 
@@ -14,22 +16,40 @@ export const Confirm = () => {
   return (
     <SignUpMain>
       <SignUpRegisterTitle>確認画面</SignUpRegisterTitle>
+      <SignUpConfirmLavel>代表者氏名</SignUpConfirmLavel>
       <SignUpConfirm>
-        代表者氏名：{state.last_name}
+        {state.last_name}
         {state.first_name}
       </SignUpConfirm>
+
+      <SignUpConfirmLavel>代表者氏名（カナ）</SignUpConfirmLavel>
       <SignUpConfirm>
-        代表者氏名（カナ）：{state.last_name_kana}
+        {state.last_name_kana}
         {state.first_name_kana}
       </SignUpConfirm>
-      <SignUpConfirm>メールアドレス：{state.email}</SignUpConfirm>
-      <SignUpConfirm>店舗名：{state.shop_name}</SignUpConfirm>
-      <SignUpConfirm>電話番号：{state.phone_number}</SignUpConfirm>
-      <SignUpConfirm>郵便番号：{state.postal_code}</SignUpConfirm>
-      <SignUpConfirm>都道府県：{state.prefecture}</SignUpConfirm>
-      <SignUpConfirm>住所：{state.address}</SignUpConfirm>
-      <SignUpConfirm>建物名・号室（任意）：{state.building}</SignUpConfirm>
+
+      <SignUpConfirmLavel>メールアドレス</SignUpConfirmLavel>
+      <SignUpConfirm>{state.email}</SignUpConfirm>
+
+      <SignUpConfirmLavel>店舗名</SignUpConfirmLavel>
+      <SignUpConfirm>{state.shop_name}</SignUpConfirm>
+
+      <SignUpConfirmLavel>電話番号</SignUpConfirmLavel>
+      <SignUpConfirm>{state.phone_number}</SignUpConfirm>
+
+      <SignUpConfirmLavel>郵便番号</SignUpConfirmLavel>
+      <SignUpConfirm>{state.postal_code}</SignUpConfirm>
+
+      <SignUpConfirmLavel>都道府県</SignUpConfirmLavel>
+      <SignUpConfirm>{state.prefecture}</SignUpConfirm>
+
+      <SignUpConfirmLavel>住所</SignUpConfirmLavel>
+      <SignUpConfirm>{state.address}</SignUpConfirm>
+
+      <SignUpConfirmLavel>建物名・号室</SignUpConfirmLavel>
+      <SignUpConfirm>{state.building}</SignUpConfirm>
       <br />
+
       <input type="submit" className="inputButton" value="登録する" />
     </SignUpMain>
   );

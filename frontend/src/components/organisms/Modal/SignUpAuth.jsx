@@ -39,10 +39,14 @@ export const SignUpLogin = styled.a`
   color: black;
 `;
 
+export const SignUpConfirmLavel = styled.div`
+  text-align: left;
+  font-weight: bold;
+  margin: 8px;
+`;
+
 export const SignUpConfirm = styled.div`
-  margin: 20px 20px;
+  margin: 0 20px 15px 8px;
   letter-spacing: 0.04em;
   display: flex;
-  // justify-content: center;
-  // align-item: center;
 `;

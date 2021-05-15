@@ -17,6 +17,7 @@ export const SignUpStep2 = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const { actions, state } = useStateMachine({ updateAction });
   const onSubmit = (data) => {
     actions.updateAction(data);
