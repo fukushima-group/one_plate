@@ -1,7 +1,15 @@
+import React from "react";
+import styled from "styled-components";
+import { BaseButton } from "components/atoms/Button/BaseButton";
+
+const SignButton = styled(BaseButton)`
+  background-color: black;
+`;
+
 export const SignUpButton = () => {
   return (
-    <div className="App">
-      <h1>LoginButton</h1>
-    </div>
+    <>
+      <SignButton>アカウント登録</SignButton>
+    </>
   );
 };
