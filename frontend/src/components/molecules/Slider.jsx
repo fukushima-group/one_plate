@@ -75,20 +75,20 @@ export const KvSlider = () => {
 
     return (
         <SliderContainer>
-         <Slider {...settings}>
-          <SlideItem>
-            <SliderTxt>キャッチコピー</SliderTxt>
-            <img src={`${process.env.PUBLIC_URL}/topPageImage.jpg`} style={{width:"100%"}} />
-          </SlideItem>
-          <SlideItem>
-            <SliderTxt>キャッチコピー2</SliderTxt>
-            <img src={`${process.env.PUBLIC_URL}/kv2.jpg`} style={{width:"100%"}} />
-          </SlideItem>
-          <SlideItem>
-            <SliderTxt>キャッチコピー3</SliderTxt>
-            <img src={`${process.env.PUBLIC_URL}/kv3.jpg`} style={{width:"100%"}} />
-          </SlideItem>
-         </Slider>
+          <Slider {...settings}>
+            <SlideItem>
+              <SliderTxt>キャッチコピー</SliderTxt>
+              <img src={`${process.env.PUBLIC_URL}/topPageImage.jpg`} style={{width:"100%"}} />
+            </SlideItem>
+            <SlideItem>
+              <SliderTxt>キャッチコピー2</SliderTxt>
+              <img src={`${process.env.PUBLIC_URL}/kv2.jpg`} style={{width:"100%"}} />
+            </SlideItem>
+            <SlideItem>
+              <SliderTxt>キャッチコピー3</SliderTxt>
+              <img src={`${process.env.PUBLIC_URL}/kv3.jpg`} style={{width:"100%"}} />
+            </SlideItem>
+          </Slider>
       </SliderContainer>
     );
 };
