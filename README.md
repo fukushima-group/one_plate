@@ -1,4 +1,58 @@
 # README
+
+## 導入方法
+**①git cloneする**
+
+```
+% git clone https://github.com/fukushima-group/one_plate.git
+% cd one_plate
+```
+  
+**②api側のcredentials.yml.encを削除し再度作成**
+
+```
+one_plate % cd api/config
+config % rm credentials.yml.enc
+config % cd ..
+api % EDITOR="vi" bin/rails credentials:edit
+```
+
+**③react側のnode_modulesをインストールする**
+
+```
+api % cd ../frontend
+frontend % docker-compose run frontend npm install
+```
+
+**④下記コマンドを実行し、コンテナを起動**
+
+```
+frontend % cd ..
+one_plate % docker-compose up -d
+```
+
+**⑤データベースを作成**
+
+```
+one_plate % docker exec one_plate_api_1 rails db:create
+```
+
+※失敗した場合、コンテナ内にログインし、データベースを作成する
+
+```
+one_plate % docker exec -it one_plate_api_1 bash
+root@コンテナID:/one_plate/api# bundle install
+root@コンテナID:/one_plate/api# bundle exec rails db:create
+root@コンテナID:/one_plate/api# exit
+```
+
+**⑥各ローカルホストにアクセスし、確認**
+
+```
+Rails→  http://localhost:3000/
+React→  http://localhost:8000/
+```
+
 # one_plate DB設計
 
 ## usersテーブル
