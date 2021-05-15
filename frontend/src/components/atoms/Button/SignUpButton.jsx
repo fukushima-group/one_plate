@@ -1,5 +1,3 @@
-// 再利用できるかもだから、一応残しておく
-
 import React from "react";
 import styled from "styled-components";
 import { BaseButton } from "components/atoms/Button/BaseButton";
