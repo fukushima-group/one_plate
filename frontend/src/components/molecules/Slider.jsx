@@ -32,13 +32,11 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, 
-              position: "absolute", 
-              top:"100px",
-              right:"25px",
-              zIndex:"999"}}
+
       onClick={onClick}
-    />
+      >
+       <img src={`${process.env.PUBLIC_URL}/next.png`} style={{...style,width:"100%",position: "absolute",right:"40px",top:"-10px"}} />
+      </div>
   );
 }
 
@@ -47,13 +45,12 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, 
-              position: "absolute", 
-              top:"100px",
-              left:"25px",
+      style={{ ...style,
               zIndex:"999" }}
       onClick={onClick}
-    />
+    >
+      <img src={`${process.env.PUBLIC_URL}/prev.png`} style={{...style,width:"100%",position: "absolute",left:"40px",top:"-10px"}} />
+    </div>
   );
 }
 
