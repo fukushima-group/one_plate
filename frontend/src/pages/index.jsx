@@ -1,3 +1,5 @@
+// pagesのディレクトリに実際にrenderするファイルをおく
+
 import React , { Component } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '../style/index.jsx'
