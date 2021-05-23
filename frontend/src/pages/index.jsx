@@ -1,10 +1,10 @@
 // pagesのディレクトリに実際にrenderするファイルをおく
-
 import React , { Component } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '../style/index.jsx'
 import  { Header }  from '../components/molecules/Header';
-import  { KvSlider }  from '../components/molecules/Slider';
+import  { KvSlider }  from '../components/molecules/slider/Slider';
+import  { StoreSlider }  from '../components/molecules/slider/StoreSlider';
 import  { SearchWrap  }  from '../components/molecules/SearchWrap';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
@@ -41,36 +41,6 @@ const H3Description = styled.h3`
 }
 `
 
-const PostedWrap = styled.div`
-    padding:10px;
-`;
-
-const PostTitleWrap = styled.div`
-    display:flex;
-`;
-
-const PostedFoodName = styled.h4`
-    padding-right:15px;
-`;
-
-const PostedStoreName = styled.h4`
-`;
-
-const PostedContent = styled.div`
-    display:flex;
-    padding:10px;
-`;
-
-const PostPicWrap = styled.div`
-    text-align:center;
-    padding-right:15px;
-    max-height:200px;
-`;
-
-const PostTxtWrap = styled.p`
- 
-`;
-
 const BlackButton = styled.div`
   padding: 0.5rem 2.25rem;
   border-radius:15px;
@@ -100,81 +70,27 @@ export const Index = () => {
   return (
     <Container>
       <GlobalStyle />
-         <Header />
-         <KvSlider />
-         <Grid container className={classes.GridContainer} >
+        <Header />
+        <KvSlider />
+        <Grid container className={classes.GridContainer} >
             <SearchWrap />
-         </Grid>
+        </Grid>
         <Grid container>
           <Grid item xs={12}>
               <H3Description>新着投稿</H3Description>
-              <PostedWrap>
-                <PostTitleWrap>
-                  <PostedFoodName>唐揚げ</PostedFoodName>
-                  <PostedStoreName>東京からあげバル＠東京</PostedStoreName>
-                </PostTitleWrap>
-                <PostedContent>
-                  <PostPicWrap>
-                     <img src={`${process.env.PUBLIC_URL}/karaage.jpg`} style={{width:"100px"}} />
-                  </PostPicWrap>
-                  <PostTxtWrap>
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                  </PostTxtWrap>
-                </PostedContent>
-                <WhiteButtonWrap>
-                  <WhiteButton>VIEW MORE</WhiteButton>  
-                </WhiteButtonWrap>
-              </PostedWrap>
+              <StoreSlider />
           </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12}>
               <H3Description>最近見たお店</H3Description>
-              <PostedWrap>
-                <PostTitleWrap>
-                  <PostedFoodName>唐揚げ</PostedFoodName>
-                  <PostedStoreName>東京からあげバル＠東京</PostedStoreName>
-                </PostTitleWrap>
-                <PostedContent>
-                  <PostPicWrap>
-                     <img src={`${process.env.PUBLIC_URL}/karaage.jpg`} style={{width:"100px"}} />
-                  </PostPicWrap>
-                  <PostTxtWrap>
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                  </PostTxtWrap>
-                </PostedContent>  
-                <WhiteButtonWrap>
-                  <WhiteButton>VIEW MORE</WhiteButton>  
-                </WhiteButtonWrap>
-              </PostedWrap>
+              <StoreSlider />
           </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12}>
               <H3Description>オススメのお店</H3Description>
-              <PostedWrap>
-                <PostTitleWrap>
-                  <PostedFoodName>唐揚げ</PostedFoodName>
-                  <PostedStoreName>東京からあげバル＠東京</PostedStoreName>
-                </PostTitleWrap>
-                <PostedContent>
-                  <PostPicWrap>
-                     <img src={`${process.env.PUBLIC_URL}/karaage.jpg`} style={{width:"100px"}} />
-                  </PostPicWrap>
-                  <PostTxtWrap>
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                  </PostTxtWrap>
-                </PostedContent>  
-                <WhiteButtonWrap>
-                  <WhiteButton>VIEW MORE</WhiteButton>  
-                </WhiteButtonWrap>
-              </PostedWrap>
+              <StoreSlider />
           </Grid>
         </Grid>
     </Container>

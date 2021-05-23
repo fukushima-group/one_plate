@@ -32,7 +32,6 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-
       onClick={onClick}
       >
        <img src={`${process.env.PUBLIC_URL}/next.png`} style={{...style,width:"100%",position: "absolute",right:"40px",top:"-10px"}} />
