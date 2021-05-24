@@ -175,6 +175,3 @@ React→ http://localhost:8000/
 
 - belongs_to :user, optional: true
 
-```
-
-```
