@@ -1,7 +1,6 @@
 import React , { Component, useState } from 'react';
 import styled from 'styled-components';
-import { HumbergerIcon } from '../atoms/Humberger';
-import { Nav } from '../atoms/Nav';
+import { slide as Menu } from "react-burger-menu";
 
 // header
 const GlobalHeader = styled.header`
@@ -19,14 +18,41 @@ const GlobalHeader = styled.header`
 const HeaderTitle = styled.h2`
 `;
 
-export const Header = () => {
-    const [open, setOpen] = useState(false);
+const Link = styled.a`
 
-    return (
+`;
+
+var styles = {
+  bmMenuWrap: {
+    transition: ''
+  }
+}
+
+export const Header = ({
+  ...props
+  
+}) => {
+  return (
     <GlobalHeader>
       <HeaderTitle>One Plate</HeaderTitle>
-      <HumbergerIcon  open={open} setOpen={setOpen} />
-      <Nav open={open} setOpen={setOpen} />
+      <Menu {...props} left width={250} 
+      pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+        <Link to="/some-page-link" className="menu-item" >
+          ホームページ
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+          ページ2
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+        ページ3
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+        ページ4
+        </Link>
+       </Menu>
     </GlobalHeader>
     );
 };

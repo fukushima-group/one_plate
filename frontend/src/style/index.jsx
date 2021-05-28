@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    over-flow:hidden;
   }
   *, *:before, *:after {
     box-sizing: border-box;
