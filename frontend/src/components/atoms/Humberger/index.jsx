@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { Component, useState } from 'react';
 import styled from 'styled-components';
 
 const Humburger = styled.div`
@@ -23,19 +23,32 @@ const InnerLine = styled.div`
 const InnerLine1 = styled(InnerLine)`
   top: 0;
 `;
+
 const InnerLine2 = styled(InnerLine)`
   top: 10px;
 `;
+
 const InnerLine3 = styled(InnerLine)`
   bottom: 0px;
 `;
 
-export const HumbergerIcon = () => {
+export const HumbergerIcon = ({
+  open,
+  setOpen,
+}) => {
   return (
-    <Humburger>
-       <InnerLine1  />
-       <InnerLine2  />
-       <InnerLine3  />
+    <Humburger
+          type="button"
+          className="button hamburger"
+          aria-controls="global-nav"
+          //openの値はfalse
+          expanded={open}
+          //クリックされると真偽値が逆になる。falseの場合trueに切り替わる
+          onClick={() => setOpen(!open)}
+    >
+      <InnerLine1  />
+      <InnerLine2  />
+      <InnerLine3  />
     </Humburger>
   );
 };

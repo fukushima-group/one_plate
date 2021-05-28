@@ -1,5 +1,5 @@
 // pagesのディレクトリに実際にrenderするファイルをおく
-import React , { Component } from 'react';
+import React , { Component, useState } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '../style/index.jsx'
 import  { Header }  from '../components/molecules/Header';
@@ -24,7 +24,7 @@ const Container = styled.div`
   overflow:hidden;
 `;
 
-// 新着投稿
+// H3
 const H3Description = styled.h3`
   position: relative;
   margin: 0 0 0 20px;
@@ -50,17 +50,7 @@ const BlackButton = styled.div`
   text-align:center;
 `;
 
-const WhiteButtonWrap = styled.div`
-  text-align:right;
-`;
 
-const WhiteButton = styled.a`
-  padding: 0.5rem 1rem;
-  border:1px solid black;
-  background-color:white;
-  color:black;
-  width:30%;
-`;
 
 
 export const Index = () => {
