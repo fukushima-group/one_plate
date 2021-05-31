@@ -1,81 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import './style.scss'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-// Slider
-const SliderContainer = styled.div`
-  position: relative;
--webkit-box-sizing: border-box;
-`;
-
-// Posted
-const H3Description = styled.h3`
-  position: relative;
-  margin: 0 0 0 20px;
-  padding:15px 0;
-  &::before {
-    content: "";
-    position: absolute;
-    background: #000;
-    width: 50px;
-    height: 1px;
-    left: -60px;
-    top: 50%;
-  }
-}
-`
-
-const PostedWrap = styled.div`
-    padding:10px;
-`;
-
-const PostTitleWrap = styled.div`
-    display:flex;
-`;
-
-const PostedFoodName = styled.h4`
-    padding-right:15px;
-`;
-
-const PostedStoreName = styled.h4`
-`;
-
-const PostedContent = styled.div`
-    display:flex;
-    padding:10px;
-`;
-
-const PostPicWrap = styled.div`
-    text-align:center;
-    padding-right:15px;
-    max-height:200px;
-`;
-
-const PostTxtWrap = styled.p``;
-
-const BlackButton = styled.div`
-  padding: 0.5rem 2.25rem;
-  border-radius:15px;
-  border:1px solid black;
-  background-color:black;
-  color:white;
-  text-align:center;
-`;
-
-const WhiteButtonWrap = styled.div`
-  text-align:right;
-`;
-
-const WhiteButton = styled.a`
-  padding: 0.5rem 1rem;
-  border:1px solid black;
-  background-color:white;
-  color:black;
-  width:30%;
-`;
 
 export const StoreSlider = () => {
 
@@ -90,28 +18,30 @@ export const StoreSlider = () => {
       };
 
     return (
-        <SliderContainer>
+        <div className="sliderContainer">
           <Slider {...settings}>
-            <PostedWrap>
-                <PostTitleWrap>
-                    <PostedFoodName>唐揚げ</PostedFoodName>
-                    <PostedStoreName>東京からあげバル＠東京</PostedStoreName>
-                </PostTitleWrap>
-                <PostedContent>
-                    <PostPicWrap>
+            <div className="posted">
+                <div className="postedTitleWrap">
+                    <p>唐揚げ</p>
+                    <h4>東京からあげバル＠東京</h4>
+                </div>
+                <div className="postedContent">
+                    <div className="picWrap">
                         <img src={`${process.env.PUBLIC_URL}/karaage.jpg`} style={{width:"100px"}} />
-                    </PostPicWrap>
-                    <PostTxtWrap>
+                    </div>
+                    <p>
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                    </PostTxtWrap>
-                </PostedContent>
-                <WhiteButtonWrap>
-                  <WhiteButton>VIEW MORE</WhiteButton>  
-                </WhiteButtonWrap>
-            </PostedWrap>
+                    </p>
+                    
+                </div>
+                <div className="whiteButtonWrap">
+                  <a className="whiteButton">VIEW MORE</a>
+              </div>
+            </div>
+           
           </Slider>
-      </SliderContainer>
+        </div>
     );
 };

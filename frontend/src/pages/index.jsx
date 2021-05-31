@@ -1,7 +1,9 @@
 // pagesのディレクトリに実際にrenderするファイルをおく
 import React , { Component, useState } from 'react';
-import styled from 'styled-components';
-import { GlobalStyle } from '../style/index.jsx'
+import '../style/reset.css'
+import '../style/base.scss'
+import '../style/general.scss'
+import './style.scss'
 import  { Header }  from '../components/molecules/Header';
 import  { KvSlider }  from '../components/molecules/slider/Slider';
 import  { StoreSlider }  from '../components/molecules/slider/StoreSlider';
@@ -19,48 +21,12 @@ const useStyles = makeStyles({
   },
 });
 
-// common
-const Container = styled.div`
-  overflow:hidden;
-`;
-
-// H3
-const H3Description = styled.h3`
-  position: relative;
-  margin: 0 0 0 20px;
-  padding:15px 0;
-  &::before {
-    content: "";
-    position: absolute;
-    background: #000;
-    width: 50px;
-    height: 1px;
-    left: -60px;
-    top: 50%;
-  }
-}
-`
-
-const BlackButton = styled.div`
-  padding: 0.5rem 2.25rem;
-  border-radius:15px;
-  border:1px solid black;
-  background-color:black;
-  color:white;
-  text-align:center;
-`;
-
-
-
 
 export const Index = () => {
   // useStylesの呼び出し
   const classes = useStyles();
-  
-
   return (
-    <Container>
-      <GlobalStyle />
+    <div className="container">
         <Header />
         <KvSlider />
         <Grid container className={classes.GridContainer} >
@@ -68,23 +34,23 @@ export const Index = () => {
         </Grid>
         <Grid container>
           <Grid item xs={12}>
-              <H3Description>新着投稿</H3Description>
+              <h3>新着投稿</h3>
               <StoreSlider />
           </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12}>
-              <H3Description>最近見たお店</H3Description>
+              <h3>最近見たお店</h3>
               <StoreSlider />
           </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12}>
-              <H3Description>オススメのお店</H3Description>
+              <h3>オススメのお店</h3>
               <StoreSlider />
           </Grid>
         </Grid>
-    </Container>
+    </div>
   );
 };
 

@@ -1,0 +1,29 @@
+/*****************
+molecules/SearchWrap.jsx
+*****************/
+.searchArea{
+    width:100%;
+    margin-top:-40px;
+    position: relative;
+    z-index:999;
+    .searchInner{
+        width:100%;
+        margin-bottom:15px;
+        .searchField{
+            display:block;
+            width:100%;
+            line-height:40px;
+            &::placeholder {
+                text-align:center;
+            }
+        }
+    }
+    .searchButton{
+        padding: 0.5rem 2.25rem;
+        border:1px solid black;
+        font-weight:bold;
+        background-color:black;
+        color:white;
+        text-align:center;
+    }
+}
