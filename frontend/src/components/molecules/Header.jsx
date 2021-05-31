@@ -1,12 +1,12 @@
-import React from 'react';
+import React , { Component, useState } from 'react';
 import styled from 'styled-components';
-import { HumbergerIcon } from '../atoms/Humberger/HumbergerIcon.jsx';
+import { slide as Menu } from "react-burger-menu";
 
 // header
 const GlobalHeader = styled.header`
   display:flex;
   position:fixed;
-  width: 100%; 
+  width: 100%;
   height:72px;
   background-color: white;
   justify-content: space-between;
@@ -18,14 +18,42 @@ const GlobalHeader = styled.header`
 const HeaderTitle = styled.h2`
 `;
 
-export const Header = () => {
-    return (
+const Link = styled.a`
+
+`;
+
+var styles = {
+  bmMenuWrap: {
+    transition: ''
+  }
+}
+
+export const Header = ({
+  ...props
+  
+}) => {
+  return (
     <GlobalHeader>
       <HeaderTitle>One Plate</HeaderTitle>
-      <HumbergerIcon />
+      <Menu {...props} left width={250} 
+      pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+        <Link to="/some-page-link" className="menu-item" >
+          ホームページ
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+          ページ2
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+        ページ3
+        </Link>
+
+        <Link to="/some-page-link" className="menu-item" >
+        ページ4
+        </Link>
+       </Menu>
     </GlobalHeader>
     );
 };
 
-  
-  

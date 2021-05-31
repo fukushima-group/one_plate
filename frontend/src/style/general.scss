@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body{
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;    height: 100%;
+    margin: 0;
+}
+
+img {
+    align-self: flex-start;  /* for safari */
+    width: 100%;
+    height: auto;
+}
+
+.contents-width {
+    width: 95%;
+    margin: 0 auto;
+}
+.contents {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* font-size */
+h1{
+    font-size: 36px;
+}
+h3{
+    font-size: 18px;
+}
