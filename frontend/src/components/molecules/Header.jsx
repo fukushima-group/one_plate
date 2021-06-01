@@ -8,7 +8,7 @@ export const Header = ({
   ...props
 }) => {
   return (
-    <div>
+    <div className="HeaderWrap">
       <div className="headerLeft">
         <h2>OnePlate</h2>
       </div>
@@ -19,18 +19,18 @@ export const Header = ({
                 投稿一覧ページ
               </a>
               <a to="/some-page-link" className="menu-item" >
-                ページ2
+                マイページ
               </a>
               <a to="/some-page-link" className="menu-item" >
-                ページ3
+                投稿ページ
               </a>
               <a to="/some-page-link" className="menu-item" >
-                ページ4
+                他のページ
               </a>
         </Menu>
       </div>
       <div className="headerRight">
-        <p><a>ログイン</a></p>
+        <p><a href="#">ログイン</a></p>
       </div>
     </div>
     );
