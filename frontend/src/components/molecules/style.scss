@@ -27,3 +27,34 @@ molecules/SearchWrap.jsx
         text-align:center;
     }
 }
+
+/*****************
+molecules/Header.jsx
+*****************/
+.headerLeft{
+    position: fixed;
+    display: flex;
+    height:76px;
+    line-height: 76px;
+    padding:0 20px;
+    h2{
+        font-size: 18px;;
+        font-weight: bold;
+    }
+}
+.headerRight{
+    position: fixed;
+    display: flex;
+    height:40px;
+    line-height: 40px;
+    right:75px;;
+    top:10px;
+    p{
+        // 仮置き
+        background-color: black;
+        color: white;
+        padding:5px;
+        height:40px;
+        line-height: 40px;
+    }
+}
