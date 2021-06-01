@@ -34,7 +34,6 @@ function SamplePrevArrow(props) {
 }
 
 
-  
 export const KvSlider = () => {
 
     const settings = {
