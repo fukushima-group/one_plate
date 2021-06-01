@@ -34,13 +34,11 @@ export const StoreSlider = () => {
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                     </p>
-                    
                 </div>
                 <div className="whiteButtonWrap">
                   <a className="whiteButton">VIEW MORE</a>
-              </div>
+                </div>
             </div>
-           
           </Slider>
         </div>
     );
