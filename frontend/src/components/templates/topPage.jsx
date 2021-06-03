@@ -1,5 +1,5 @@
 // pagesのディレクトリに実際にrenderするファイルをおく
-import React , { Component, useState } from 'react';
+import React , { Fragment,Component, useState } from 'react';
 import './style.scss'
 import  { KvSlider }  from 'components/molecules/slider/Slider';
 import  { StoreSlider }  from 'components/molecules/slider/StoreSlider';
@@ -20,29 +20,29 @@ export const TopPage = () => {
   // useStylesの呼び出し
   const classes = useStyles();
   return (
-    <div className="container">
-        <KvSlider />
-        <Grid container className={classes.GridContainer} >
-            <SearchWrap />
+    <Fragment>
+      <KvSlider />
+      <Grid container className={classes.GridContainer} >
+          <SearchWrap />
+      </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+            <h3>新着投稿</h3>
+            <StoreSlider />
         </Grid>
-        <Grid container>
-          <Grid item xs={12}>
-              <h3>新着投稿</h3>
-              <StoreSlider />
-          </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+            <h3>最近見たお店</h3>
+            <StoreSlider />
         </Grid>
-        <Grid container>
-          <Grid item xs={12}>
-              <h3>最近見たお店</h3>
-              <StoreSlider />
-          </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+            <h3>オススメのお店</h3>
+            <StoreSlider />
         </Grid>
-        <Grid container>
-          <Grid item xs={12}>
-              <h3>オススメのお店</h3>
-              <StoreSlider />
-          </Grid>
-        </Grid>
-    </div>
+      </Grid>
+    </Fragment>
   );
 };
