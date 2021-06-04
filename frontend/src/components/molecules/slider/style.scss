@@ -1,3 +1,5 @@
+@import "/src/style/base.scss";
+
 /*****************
 StoreSlider.jsx
 *****************/
@@ -25,9 +27,9 @@ StoreSlider.jsx
             height:40px;
             .whiteButton{
                 padding: 0.5rem 1rem;
-                border:1px solid black;
-                background-color:white;
-                color:black;
+                border:1px solid cl(black);
+                background-color:cl(white);
+                color:cl(white);
                 width:200px;
                 height:200px;
             }
