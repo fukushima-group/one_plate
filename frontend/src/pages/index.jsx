@@ -24,18 +24,16 @@ export const Index = () => {
         <Header />
         {/* トップページ */}
         <Route
-          // exactはパスが完全一致する時だけレンダリングする＆デフォはfalseになっている
           exact
-          path="/">
-          <TopPage />
-        </Route>
+          path="/"
+          component={TopPage}
+          />
         {/* 一覧ページ */}
-         <Route
-          // exactはパスが完全一致する時だけレンダリングする＆デフォはfalseになっている
+        <Route
           exact
-          path="/dishes">
-          <Dishes />
-          </Route>
+          path="/dishes"
+          component={Dishes}
+          />
     </div>
     </Switch>
   </Router>

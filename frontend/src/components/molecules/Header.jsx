@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 
 import { Dishes } from  '../templates/dishes'
+import { TopPage } from  '../templates/topPage'
 
 
 
@@ -26,8 +27,8 @@ export const Header = ({
         <div>
           <Menu {...props} left
             pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
-                <Link  to="/dishes"　className="menu-item">投稿一覧ページ</Link>
                 <Link  to="/" className="menu-item">ホーム</Link>
+                <Link  to="/dishes" className="menu-item">投稿一覧ページ</Link>
                 <Link  to="/" className="menu-item">お店用ログインページ</Link>
           </Menu>
         </div>
@@ -36,14 +37,8 @@ export const Header = ({
         </div>
       </div>
 
-       {/* 飛ばしたいコンポーネント */}
-       {/* <Switch>
-          <Route path="/dishes" exact>
-            <Dishes />
-          </Route>
-          
-        </Switch> */}
+      <Route exact path="/" component={TopPage} />
+      <Route exact path="/dishes" component={Dishes}  />
     </Router>
     );
 };
-
