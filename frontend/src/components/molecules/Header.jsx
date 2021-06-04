@@ -10,8 +10,8 @@ import {
   Link
 } from "react-router-dom";
 
-import { Dishes } from  '../templates/dishes'
-import { TopPage } from  '../templates/topPage'
+import { Dishes } from  '../templates/Dishes'
+import { TopPage } from  '../templates/TopPage'
 
 
 
@@ -38,7 +38,7 @@ export const Header = ({
       </div>
 
       <Route exact path="/" component={TopPage} />
-      <Route exact path="/dishes" component={Dishes}  />
+      {/* <Route exact path="/dishes" component={Dishes}  /> */}
     </Router>
     );
 };
