@@ -10,8 +10,8 @@ import {
   Link
 } from "react-router-dom";
 
-import { Dishes } from  '../templates/dishes'
-import { TopPage } from  '../templates/topPage'
+import { Dishes } from  '../templates/Dishes'
+import { TopPage } from  '../templates/TopPage'
 
 
 
