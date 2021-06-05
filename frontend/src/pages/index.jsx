@@ -4,8 +4,8 @@ import '../style/reset.scss'
 import '../style/base.scss'
 import '../style/general.scss' // グローバルスタイル適用
 import  { Header }  from '../components/molecules/Header';
-import  { TopPage }  from '../components/templates/TopPage';
-import  { Dishes }  from '../components/templates/Dishes';
+import  { TopPage }  from '../components/templates/topPage';
+import  { Dishes }  from '../components/templates/dishes';
 
 import {
   BrowserRouter as Router,
