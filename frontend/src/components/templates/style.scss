@@ -1,5 +1,7 @@
+@import "/src/style/base.scss";
+
 /*****************
-pages/index.jsx
+templatesTopPage.jsx
 *****************/
 .container{
     overflow:hidden;
@@ -10,11 +12,43 @@ pages/index.jsx
         &::before {
             content: "";
             position: absolute;
-            background: #000;
+            background: cl(black);
             width: 50px;
             height: 1px;
             left: -60px;
             top: 50%;
+        }
+    }
+}
+
+
+
+/*****************
+templates/Dishes.jsx
+*****************/
+.dishes{
+    padding:30px;
+    .searchResult{
+        font-size: 24px;;
+        margin-bottom:20px;
+    }
+    .wrap{
+        display: flex;
+        &:not(:first-child){
+            margin-top:30px;
+        }
+        .left{
+            width:50%;
+            margin:auto;
+        }
+        .right{
+            .top{
+                display: flex;
+                margin-bottom: 20px;;
+                .food{
+                    padding-right:30px;
+                }
+            }
         }
     }
 }

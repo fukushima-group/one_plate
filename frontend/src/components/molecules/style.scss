@@ -1,3 +1,5 @@
+@import "/src/style/base.scss";
+
 /*****************
 molecules/SearchWrap.jsx
 *****************/
@@ -20,10 +22,10 @@ molecules/SearchWrap.jsx
     }
     .searchButton{
         padding: 0.5rem 2.25rem;
-        border:1px solid black;
+        border:1px solid cl(black);
         font-weight:bold;
-        background-color:black;
-        color:white;
+        background-color:cl(black);
+        color:cl(white);
         text-align:center;
     }
 }
