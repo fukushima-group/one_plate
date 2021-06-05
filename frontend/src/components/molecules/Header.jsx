@@ -19,7 +19,6 @@ export const Header = ({
   ...props
 }) => {
   return (
-    <Router>
       <div className="HeaderWrap">
         <div className="headerLeft">
           <h2>OnePlate</h2>
@@ -36,9 +35,5 @@ export const Header = ({
           <p><a href="#">ログイン</a></p>
         </div>
       </div>
-
-      <Route exact path="/" component={TopPage} />
-      <Route exact path="/dishes" component={Dishes}  />
-    </Router>
     );
 };
