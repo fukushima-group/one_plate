@@ -41,3 +41,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rubocop', require: true
 gem 'active_hash'
+
+gem 'mini_magick' # activestorage導入のため
+gem 'image_processing', '~> 1.2' # activestorage導入のため
