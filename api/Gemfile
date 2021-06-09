@@ -44,3 +44,4 @@ gem 'active_hash'
 
 gem 'mini_magick' # activestorage導入のため
 gem 'image_processing', '~> 1.2' # activestorage導入のため
+gem 'active_storage_validations', '~> 0.8'
