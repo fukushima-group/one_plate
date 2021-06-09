@@ -24,8 +24,11 @@ services:
     platform: linux/x86_64
     image: mysql:8.0
     environment:
+      # あげる前要確認
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
+      MYSQL_DATABASE: one_plate
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
     ports:
       - '3307:3307'
     volumes:

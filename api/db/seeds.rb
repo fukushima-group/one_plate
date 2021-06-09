@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Dishesのデータを生成する
+dish1 = Dish.create(:name => '料理１', 
+                    :description => '説明1',
+                    :price => 1000, :tag => "焼肉",
+                    :addexplain => "数量限定",
+                    )
+dish1.images.attach(io: File.open(Rails.root.join('app/assets/images/yakiniku.jpeg')),filename: 'yakiniku.jpg')
+
+# Dish.create(:name => '料理２', :description => '説明２', :price => 1100, :tag => "寿司", :addexplain => "" ,:images => "yakiniku.jpg")
+# Dish.create(:name => '料理３', :description => '説明３', :price => 1200, :tag => "", :addexplain => "早めに行かないと並ぶので11時着は必須やで" ,:images => "yakiniku.jpg")
